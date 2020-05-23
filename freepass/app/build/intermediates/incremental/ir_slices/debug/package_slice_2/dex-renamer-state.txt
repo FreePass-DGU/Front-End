@@ -1,4 +1,4 @@
-#Fri May 22 22:35:46 KST 2020
+#Sat May 23 20:27:01 KST 2020
 base.0=/Users/shin-yeji/Desktop/FreePass/freepass/app/build/intermediates/transforms/dexMerger/debug/2
 path.0=classes.dex
 renamed.0=classes.dex

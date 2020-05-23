@@ -8,20 +8,30 @@ import android.widget.Button
 
 class TodaySurveryActivity : AppCompatActivity() {
 
-    var food_korean : Button? = null
-    var food_japanese : Button? = null
-    var food_chinese : Button? = null
-    var food_western : Button? = null
-
-    var cafe_mood1 : Button? =  null
-    var cafe_mood2 : Button? = null
-
     var course_1 : Button? = null
     var course_2 : Button? = null
     var course_3 : Button? = null
     var course_4 : Button? = null
     var course_5 : Button? = null
     var course_6 : Button? = null
+    var course_7 : Button? = null
+    var course_8 : Button? = null
+    var course_9 : Button? = null
+    var course_10 : Button? = null
+    var course_11 : Button? = null
+    var course_12 : Button? = null
+    var course_14 : Button? = null
+    var course_15 : Button? = null
+    var course_16 : Button? = null
+    var course_17 : Button? = null
+    var course_18 : Button? = null
+    var course_19 : Button? = null
+    var course_20 : Button? = null
+    var course_21 : Button? = null
+    var course_22 : Button? = null
+    var course_23 : Button? = null
+    var course_24 : Button? = null
+    var course_25 : Button? = null
 
     var button_complete : Button? = null
 
@@ -29,97 +39,31 @@ class TodaySurveryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_today_survery)
 
-        var food = arrayOf(0,0,0,0)
-        food_korean = findViewById(R.id.food_korean) as Button
-        food_japanese = findViewById(R.id.food_japanise) as Button
-        food_chinese = findViewById(R.id.food_chinese) as Button
-        food_western = findViewById(R.id.food_western) as Button
-        food_korean!!.setOnClickListener {
-            if(food[0]==0) {
-                food_korean!!.setBackgroundResource(R.drawable.button_shape_2)
-                food_korean!!.setTextColor(Color.WHITE)
-                food[0]=1
-            }
-            else {
-                food_korean!!.setBackgroundResource(R.drawable.button_shape)
-                food_korean!!.setTextColor(Color.parseColor("#707070"))
-                food[0]=0
-            }
-        }
-        food_japanese!!.setOnClickListener {
-            if(food[1]==0) {
-                food_japanese!!.setBackgroundResource(R.drawable.button_shape_2)
-                food_japanese!!.setTextColor(Color.WHITE)
-                food[1]=1
-            }
-            else {
-                food_japanese!!.setBackgroundResource(R.drawable.button_shape)
-                food_japanese!!.setTextColor(Color.parseColor("#707070"))
-                food[1]=0
-            }
-        }
-        food_chinese!!.setOnClickListener {
-            if(food[2]==0) {
-                food_chinese!!.setBackgroundResource(R.drawable.button_shape_2)
-                food_chinese!!.setTextColor(Color.WHITE)
-                food[2]=1
-            }
-            else {
-                food_chinese!!.setBackgroundResource(R.drawable.button_shape)
-                food_chinese!!.setTextColor(Color.parseColor("#707070"))
-                food[2]=0
-            }
-        }
-        food_western!!.setOnClickListener {
-            if(food[3]==0) {
-                food_western!!.setBackgroundResource(R.drawable.button_shape_2)
-                food_western!!.setTextColor(Color.WHITE)
-                food[3]=1
-            }
-            else {
-                food_western!!.setBackgroundResource(R.drawable.button_shape)
-                food_western!!.setTextColor(Color.parseColor("#707070"))
-                food[3]=0
-            }
-        }
-
-
-        var cafe = arrayOf(0,0)
-        cafe_mood1 = findViewById(R.id.cafe_mood1) as Button
-        cafe_mood2 = findViewById(R.id.cafe_mood2) as Button
-        cafe_mood1!!.setOnClickListener {
-            if(cafe[0]==0) {
-                cafe_mood1!!.setBackgroundResource(R.drawable.button_shape_2)
-                cafe_mood1!!.setTextColor(Color.WHITE)
-                cafe[0]=1
-            }
-            else {
-                cafe_mood1!!.setBackgroundResource(R.drawable.button_shape)
-                cafe_mood1!!.setTextColor(Color.parseColor("#707070"))
-                cafe[0]=0
-            }
-        }
-        cafe_mood2!!.setOnClickListener {
-            if(cafe[1]==0) {
-                cafe_mood2!!.setBackgroundResource(R.drawable.button_shape_2)
-                cafe_mood2!!.setTextColor(Color.WHITE)
-                cafe[1]=1
-            }
-            else {
-                cafe_mood2!!.setBackgroundResource(R.drawable.button_shape)
-                cafe_mood2!!.setTextColor(Color.parseColor("#707070"))
-                cafe[1]=0
-            }
-        }
-
-
-        var course = arrayOf(0,0,0,0,0,0)
+        var course = arrayOf(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
         course_1 = findViewById(R.id.course_1) as Button
         course_2 = findViewById(R.id.course_2) as Button
         course_3 = findViewById(R.id.course_3) as Button
         course_4 = findViewById(R.id.course_4) as Button
         course_5 = findViewById(R.id.course_5) as Button
         course_6 = findViewById(R.id.course_6) as Button
+        course_7 = findViewById(R.id.course_7) as Button
+        course_8 = findViewById(R.id.course_8) as Button
+        course_9 = findViewById(R.id.course_9) as Button
+        course_10 = findViewById(R.id.course_10) as Button
+        course_11 = findViewById(R.id.course_11) as Button
+        course_12 = findViewById(R.id.course_12) as Button
+        course_14 = findViewById(R.id.course_14) as Button
+        course_15 = findViewById(R.id.course_15) as Button
+        course_16 = findViewById(R.id.course_16) as Button
+        course_17 = findViewById(R.id.course_17) as Button
+        course_18 = findViewById(R.id.course_18) as Button
+        course_19 = findViewById(R.id.course_19) as Button
+        course_20 = findViewById(R.id.course_20) as Button
+        course_21 = findViewById(R.id.course_21) as Button
+        course_22 = findViewById(R.id.course_22) as Button
+        course_23 = findViewById(R.id.course_23) as Button
+        course_24 = findViewById(R.id.course_24) as Button
+        course_25 = findViewById(R.id.course_25) as Button
         course_1!!.setOnClickListener {
             if(course[0]==0) {
                 course_1!!.setBackgroundResource(R.drawable.button_shape_2)
@@ -192,7 +136,222 @@ class TodaySurveryActivity : AppCompatActivity() {
                 course[5]=0
             }
         }
-
+        course_7!!.setOnClickListener {
+            if(course[6]==0) {
+                course_7!!.setBackgroundResource(R.drawable.button_shape_2)
+                course_7!!.setTextColor(Color.WHITE)
+                course[6]=1
+            }
+            else {
+                course_7!!.setBackgroundResource(R.drawable.button_shape)
+                course_7!!.setTextColor(Color.parseColor("#707070"))
+                course[6]=0
+            }
+        }
+        course_8!!.setOnClickListener {
+            if(course[7]==0) {
+                course_8!!.setBackgroundResource(R.drawable.button_shape_2)
+                course_8!!.setTextColor(Color.WHITE)
+                course[7]=1
+            }
+            else {
+                course_8!!.setBackgroundResource(R.drawable.button_shape)
+                course_8!!.setTextColor(Color.parseColor("#707070"))
+                course[7]=0
+            }
+        }
+        course_9!!.setOnClickListener {
+            if(course[8]==0) {
+                course_9!!.setBackgroundResource(R.drawable.button_shape_2)
+                course_9!!.setTextColor(Color.WHITE)
+                course[8]=1
+            }
+            else {
+                course_9!!.setBackgroundResource(R.drawable.button_shape)
+                course_9!!.setTextColor(Color.parseColor("#707070"))
+                course[8]=0
+            }
+        }
+        course_10!!.setOnClickListener {
+            if(course[9]==0) {
+                course_10!!.setBackgroundResource(R.drawable.button_shape_2)
+                course_10!!.setTextColor(Color.WHITE)
+                course[9]=1
+            }
+            else {
+                course_10!!.setBackgroundResource(R.drawable.button_shape)
+                course_10!!.setTextColor(Color.parseColor("#707070"))
+                course[9]=0
+            }
+        }
+        course_11!!.setOnClickListener {
+            if(course[10]==0) {
+                course_11!!.setBackgroundResource(R.drawable.button_shape_2)
+                course_11!!.setTextColor(Color.WHITE)
+                course[10]=1
+            }
+            else {
+                course_11!!.setBackgroundResource(R.drawable.button_shape)
+                course_11!!.setTextColor(Color.parseColor("#707070"))
+                course[10]=0
+            }
+        }
+        course_12!!.setOnClickListener {
+            if(course[11]==0) {
+                course_12!!.setBackgroundResource(R.drawable.button_shape_2)
+                course_12!!.setTextColor(Color.WHITE)
+                course[11]=1
+            }
+            else {
+                course_12!!.setBackgroundResource(R.drawable.button_shape)
+                course_12!!.setTextColor(Color.parseColor("#707070"))
+                course[11]=0
+            }
+        }
+        course_14!!.setOnClickListener {
+            if(course[12]==0) {
+                course_14!!.setBackgroundResource(R.drawable.button_shape_2)
+                course_14!!.setTextColor(Color.WHITE)
+                course[12]=1
+            }
+            else {
+                course_14!!.setBackgroundResource(R.drawable.button_shape)
+                course_14!!.setTextColor(Color.parseColor("#707070"))
+                course[12]=0
+            }
+        }
+        course_15!!.setOnClickListener {
+            if(course[13]==0) {
+                course_15!!.setBackgroundResource(R.drawable.button_shape_2)
+                course_15!!.setTextColor(Color.WHITE)
+                course[13]=1
+            }
+            else {
+                course_15!!.setBackgroundResource(R.drawable.button_shape)
+                course_15!!.setTextColor(Color.parseColor("#707070"))
+                course[13]=0
+            }
+        }
+        course_16!!.setOnClickListener {
+            if(course[14]==0) {
+                course_16!!.setBackgroundResource(R.drawable.button_shape_2)
+                course_16!!.setTextColor(Color.WHITE)
+                course[14]=1
+            }
+            else {
+                course_16!!.setBackgroundResource(R.drawable.button_shape)
+                course_16!!.setTextColor(Color.parseColor("#707070"))
+                course[14]=0
+            }
+        }
+        course_17!!.setOnClickListener {
+            if(course[15]==0) {
+                course_17!!.setBackgroundResource(R.drawable.button_shape_2)
+                course_17!!.setTextColor(Color.WHITE)
+                course[15]=1
+            }
+            else {
+                course_17!!.setBackgroundResource(R.drawable.button_shape)
+                course_17!!.setTextColor(Color.parseColor("#707070"))
+                course[15]=0
+            }
+        }
+        course_18!!.setOnClickListener {
+            if(course[16]==0) {
+                course_18!!.setBackgroundResource(R.drawable.button_shape_2)
+                course_18!!.setTextColor(Color.WHITE)
+                course[16]=1
+            }
+            else {
+                course_18!!.setBackgroundResource(R.drawable.button_shape)
+                course_18!!.setTextColor(Color.parseColor("#707070"))
+                course[16]=0
+            }
+        }
+        course_19!!.setOnClickListener {
+            if(course[17]==0) {
+                course_19!!.setBackgroundResource(R.drawable.button_shape_2)
+                course_19!!.setTextColor(Color.WHITE)
+                course[17]=1
+            }
+            else {
+                course_19!!.setBackgroundResource(R.drawable.button_shape)
+                course_19!!.setTextColor(Color.parseColor("#707070"))
+                course[17]=0
+            }
+        }
+        course_20!!.setOnClickListener {
+            if(course[18]==0) {
+                course_20!!.setBackgroundResource(R.drawable.button_shape_2)
+                course_20!!.setTextColor(Color.WHITE)
+                course[18]=1
+            }
+            else {
+                course_20!!.setBackgroundResource(R.drawable.button_shape)
+                course_20!!.setTextColor(Color.parseColor("#707070"))
+                course[18]=0
+            }
+        }
+        course_21!!.setOnClickListener {
+            if(course[19]==0) {
+                course_21!!.setBackgroundResource(R.drawable.button_shape_2)
+                course_21!!.setTextColor(Color.WHITE)
+                course[19]=1
+            }
+            else {
+                course_21!!.setBackgroundResource(R.drawable.button_shape)
+                course_21!!.setTextColor(Color.parseColor("#707070"))
+                course[19]=0
+            }
+        }
+        course_22!!.setOnClickListener {
+            if(course[20]==0) {
+                course_22!!.setBackgroundResource(R.drawable.button_shape_2)
+                course_22!!.setTextColor(Color.WHITE)
+                course[20]=1
+            }
+            else {
+                course_22!!.setBackgroundResource(R.drawable.button_shape)
+                course_22!!.setTextColor(Color.parseColor("#707070"))
+                course[20]=0
+            }
+        }
+        course_23!!.setOnClickListener {
+            if(course[21]==0) {
+                course_23!!.setBackgroundResource(R.drawable.button_shape_2)
+                course_23!!.setTextColor(Color.WHITE)
+                course[21]=1
+            }
+            else {
+                course_23!!.setBackgroundResource(R.drawable.button_shape)
+                course_23!!.setTextColor(Color.parseColor("#707070"))
+                course[21]=0
+            }
+        }
+        course_24!!.setOnClickListener {
+            if(course[22]==0) {
+                course_24!!.setBackgroundResource(R.drawable.button_shape_2)
+                course_24!!.setTextColor(Color.WHITE)
+                course[22]=1
+            }
+            else {
+                course_24!!.setBackgroundResource(R.drawable.button_shape)
+                course_24!!.setTextColor(Color.parseColor("#707070"))
+                course[22]=0
+            }
+        }
+        course_25!!.setOnClickListener {
+            if(course[23]==0) {
+                course_25!!.setBackgroundResource(R.drawable.button_shape_2)
+                course_25!!.setTextColor(Color.WHITE)
+                course[23]=1
+            }
+            else {
+                course_25!!.setBackgroundResource(R.drawable.button_shape)
+                course_25!!.setTextColor(Color.parseColor("#707070"))
+                course[23]=0
+            }
+        }
         button_complete = findViewById(R.id.button_complete) as Button
         button_complete!!.setOnClickListener{
             val i = Intent(this, MainActivity::class.java)
