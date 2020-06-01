@@ -4,9 +4,17 @@ import android.content.Intent
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.Button
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
-class TodaySurveryActivity : AppCompatActivity() {
+class TodaySurveryActivity : AppCompatActivity(), View.OnClickListener {
+    override fun onClick(v: View?) {
+
+    }
 
     var course_1 : Button? = null
     var course_2 : Button? = null
@@ -34,12 +42,17 @@ class TodaySurveryActivity : AppCompatActivity() {
     var course_25 : Button? = null
 
     var button_complete : Button? = null
+    private var networkService : NetworkService? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_today_survery)
 
+        networkService = ApplicationController.instance!!.networkService
+
         var course = arrayOf(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+        var courseName = arrayOf("","","","","","","","","","","","","","","","","","","","","","","","","");
+
         course_1 = findViewById(R.id.course_1) as Button
         course_2 = findViewById(R.id.course_2) as Button
         course_3 = findViewById(R.id.course_3) as Button
@@ -64,6 +77,33 @@ class TodaySurveryActivity : AppCompatActivity() {
         course_23 = findViewById(R.id.course_23) as Button
         course_24 = findViewById(R.id.course_24) as Button
         course_25 = findViewById(R.id.course_25) as Button
+
+        courseName[0]= course_1!!.text.toString();
+        courseName[1]= course_2!!.text.toString();
+        courseName[2]= course_3!!.text.toString();
+        courseName[3]= course_4!!.text.toString();
+        courseName[4]= course_5!!.text.toString();
+        courseName[5]= course_6!!.text.toString();
+        courseName[6]= course_7!!.text.toString();
+        courseName[7]= course_8!!.text.toString();
+        courseName[8]= course_9!!.text.toString();
+        courseName[9]= course_10!!.text.toString();
+        courseName[10]= course_11!!.text.toString();
+        courseName[11]= course_12!!.text.toString();
+        courseName[12]= course_14!!.text.toString();
+        courseName[13]= course_15!!.text.toString();
+        courseName[14]= course_16!!.text.toString();
+        courseName[15]= course_17!!.text.toString();
+        courseName[16]= course_18!!.text.toString();
+        courseName[17]= course_19!!.text.toString();
+        courseName[18]= course_20!!.text.toString();
+        courseName[19]= course_21!!.text.toString();
+        courseName[20]= course_22!!.text.toString();
+        courseName[21]= course_23!!.text.toString();
+        courseName[22]= course_24!!.text.toString();
+        courseName[23]= course_25!!.text.toString();
+
+
         course_1!!.setOnClickListener {
             if(course[0]==0) {
                 course_1!!.setBackgroundResource(R.drawable.button_shape_2)
@@ -354,6 +394,31 @@ class TodaySurveryActivity : AppCompatActivity() {
         }
         button_complete = findViewById(R.id.button_complete) as Button
         button_complete!!.setOnClickListener{
+
+            var purposes : String = ""
+            for(i in 0..23) {
+                if(course[i]==1) purposes+= courseName[i]+';'
+            }
+            Log.v(purposes, "purposes")
+
+
+            val putTodaySurveyResponse = networkService!!.putTodaySurvey(1, TodaySurveyData(purposes))
+            putTodaySurveyResponse.enqueue(object : Callback<TodaySurveyResponse> {
+                override fun onResponse(call: Call<TodaySurveyResponse>?, response: Response<TodaySurveyResponse>?) {
+                    if(response!!.isSuccessful) {
+                        if(response.body().status=="200") {
+                            ApplicationController.instance!!.makeToast("complete survey")
+                        }
+                    }
+                }
+                override fun onFailure(call: Call<TodaySurveyResponse>?, t: Throwable?) {
+
+                    //응답 실패
+                    ApplicationController.instance!!.makeToast("check communication")
+                }
+
+            })
+
             val i = Intent(this, MainActivity::class.java)
             startActivity(i)
         }

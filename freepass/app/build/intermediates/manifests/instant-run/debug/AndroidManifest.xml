@@ -8,7 +8,10 @@
         android:minSdkVersion="28"
         android:targetSdkVersion="28" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name="com.team.freepass.ApplicationController"
         android:allowBackup="true"
         android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
         android:debuggable="true"
