@@ -6,18 +6,17 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
+        android:layout_margin="30dp"
         android:id="@+id/img1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/back"
-        android:layout_marginStart="23.19dp"
-        android:layout_marginTop="19.91dp" />
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/back"/>
 
     <ImageView
         android:id="@+id/img2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/mypage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/user"
         android:layout_marginStart="323.19dp"
         android:layout_marginTop="17.69dp" />
 

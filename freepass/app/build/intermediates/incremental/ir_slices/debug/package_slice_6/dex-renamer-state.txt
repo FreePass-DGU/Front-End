@@ -1,4 +1,7 @@
-#Tue Jun 02 11:28:15 KST 2020
+#Tue Jun 02 11:38:01 KST 2020
 base.0=/Users/shin-yeji/Desktop/FreePass/freepass/app/build/intermediates/transforms/dexMerger/debug/7
+path.1=classes 2.dex
+renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
+base.1=/Users/shin-yeji/Desktop/FreePass/freepass/app/build/intermediates/transforms/dexMerger/debug/7
