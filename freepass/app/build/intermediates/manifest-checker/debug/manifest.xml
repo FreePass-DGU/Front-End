@@ -30,6 +30,8 @@
         </activity>
         <activity android:name="com.team.freepass.MainActivity" />
         <activity android:name="com.team.freepass.TodaySurveryActivity" />
+        <activity android:name="com.team.freepass.CourseActivity" />
+        <activity android:name="com.team.freepass.CourseDetailActivity" />
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"

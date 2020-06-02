@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Jun 02 00:30:20 KST 2020
+#Tue Jun 02 11:20:37 KST 2020
 1.base=/Users/shin-yeji/Desktop/FreePass/freepass/app/build/intermediates/transforms/dexMerger/debug/14
 2.path=classes.dex
 0.baseType=DIRECTORY

@@ -7,6 +7,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import okhttp3.MediaType
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -412,6 +415,7 @@ class TodaySurveryActivity : AppCompatActivity(), View.OnClickListener {
                     }
                 }
                 override fun onFailure(call: Call<TodaySurveyResponse>?, t: Throwable?) {
+                    Log.v("실패", "failure")
 
                     //응답 실패
                     ApplicationController.instance!!.makeToast("check communication")
