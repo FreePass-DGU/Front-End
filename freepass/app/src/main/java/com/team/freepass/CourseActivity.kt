@@ -15,6 +15,8 @@ class CourseActivity : AppCompatActivity() {
 
         var img1: ImageView = findViewById(R.id.img1)
         img1.setOnClickListener{
+            var intent = Intent(this, TodaySurveryActivity::class.java)
+            startActivity(intent)
 
         }
         var img2:ImageView = findViewById(R.id.img2)

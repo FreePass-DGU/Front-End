@@ -423,7 +423,7 @@ class TodaySurveryActivity : AppCompatActivity(), View.OnClickListener {
 
             })
 
-            val i = Intent(this, MainActivity::class.java)
+            val i = Intent(this, CourseActivity::class.java)
             startActivity(i)
         }
     }
