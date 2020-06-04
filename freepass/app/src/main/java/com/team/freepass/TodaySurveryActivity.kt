@@ -405,7 +405,7 @@ class TodaySurveryActivity : AppCompatActivity(), View.OnClickListener {
             Log.v(purposes, "purposes")
 
 
-            val putTodaySurveyResponse = networkService!!.putTodaySurvey(1, TodaySurveyData(purposes))
+            val putTodaySurveyResponse = networkService!!.putTodaySurvey("1", TodaySurveyData(purposes))
             putTodaySurveyResponse.enqueue(object : Callback<TodaySurveyResponse> {
                 override fun onResponse(call: Call<TodaySurveyResponse>?, response: Response<TodaySurveyResponse>?) {
                     if(response!!.isSuccessful) {

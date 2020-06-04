@@ -9,7 +9,7 @@ interface NetworkService {
 
     @POST("/filter.php")
     fun putTodaySurvey(
-            @Header("Authorization") Authorization : Int,
+            @Header("Authorization") Authorization : String,
             @Body TodaySurveyData : TodaySurveyData
     ) : Call<TodaySurveyResponse>
 }
